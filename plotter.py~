@@ -1,0 +1,6 @@
+import csv
+import numpy
+
+file=open('411labp1.csv', 'rb')
+
+print(file)

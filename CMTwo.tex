@@ -1,0 +1,158 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Classical Mechanics HW 1}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+
+\section*{Question 1}
+Assumption: v is a velocity, and will be negative if moving down.
+
+(a): \[m\frac{dv}{dt}=-mg+c_1v\] If the ball moves up, $c_1v$ would be
+positive and thus accelerate, which is not a drag force.  If the ball
+moves down, $c_1v$ would be negative, and again, accelerate.  This
+situation will not work for either case.
+
+(b):\[m\frac{dv}{dt}=-mg-c_1v\] If the ball moves up, $-c_1v$ would be
+negative, which would accelerate down and counter the motion of the
+ball.  If the ball moves down, $-c_1v$ would be positive, and again,
+counter the motion of the ball.  This situation will work for either case.
+
+(c):\[m\frac{dv}{dt}=-mg+c_2v^2\] Whether the ball moves up or down,
+$c_2v^2$ will be positive, and thus accelerate the ball if its moving
+up or counter the motion if its moving down.  This situation will only
+work if the ball is moving down.
+
+(d):\[m\frac{dv}{dt}=-mg-c_2v^2\] Whether the ball moves up or down,
+$-c_2v^2$ will be negative, and thus accelerate the ball if its moving
+down or counter the motion if its moving up.  This situation will only
+work if the ball is moving up.
+
+\section*{Question 2}
+
+Terminal velocity $V_{term}$ happens when the sum of the forces equal
+0 and thus, the falling object has no acceleration.
+\[m\frac{dv}{dt}=0\]
+A falling object in air has forces approximately equal to gravity and
+a linear drag + a quadratic drag.
+\[m\frac{dv}{dt}=-mg+c_1v+c_2v^2\]
+The drag forces are always counter to the movement.  Setting the
+equation to 0 and solving for v will give and expression for
+$v_{term}$.
+\[0=-mg+c_1v+c_2v^2\]
+(a) If the air resistance is only quadratic, the expression becomes:
+\[0=-mg+c_2v^2\]Solving for v gives\[v_{term}=\sqrt{\frac{mg}{c_2}}\]
+(b) If the air resistance has both linear and quadratic terms, the
+expression can be solved using the quadratic formula:
+\[v_{term}=\frac{-c_1\pm\sqrt{c_1^2+4c_2mg}}{2c_2}\]
+
+\section*{Question 3}
+\[\left|\frac{c_2v^2}{c_1v}\right|=\frac{0.22v\left|v\right|D^2}{(1.55\ast10^{-4})vD}=(1.4\ast10^3)\left|v\right|D\](a):
+I
+will assume that the quadratic term dominates over the linear term
+when the ratio is 100 or higher.  Solving for v:
+\[100=(1.4\ast10^3)\left|v\right|D\]
+\[\left|v\right|=\frac{100}{(1.4\ast10^3)D}\approx7.14\frac{m}{s}\]
+Speeds below 7.14 $\frac{m}{s}$ will be dominated by the linear drag
+and speeds above will be dominated by the quadratic drag.\\
+(b): From
+Q.2. $v_{term}=\frac{-c_1\pm\sqrt{c_1^2+4c_2mg}}{2c_2}$\ substituting
+in the values
+$c_1=(1.55\ast10^{-4})D$,$c_2=0.22D^2$,$D=0.01$,$m=0.2$\ and $g=9.8$ the
+equation becomes:
+\begin{align*}
+v_{term}&=\frac{-(1.55\ast10^{-4})\ast0.01\pm\sqrt{((1.55\ast10^{-4})\ast0.01)^2+4\ast0.22\ast0.01^2\ast0.2\ast9.8}}{2\ast0.22\ast0.01^2}\\
+v_{term}&=\frac{-1.55*10^{-6}\pm\sqrt{1.7248*10^{-4}}}{4.4*10^{-5}}\\
+v_{term}\approx\pm298\frac{m}{s}
+\end{align*}
+Since negative speed for $v_{term}$ is kinda useless:
+$v_{term}=298\frac{m}{s}$
+
+(c): Seeing as how speeds above 7.14$\frac{m}{s}$\ were considered to
+be dominated by the quadratic drag term, if I had to choose which one
+to use, and only use, it would be the quadratic term for drag.  The
+speeds are deep in the quadratic realm.
+
+\section*{Question 4}
+(a): I am going to again assume the quadratic term dominates at a
+ratio of 100 or higher, and solve for v:
+\[\left|v\right| =
+\frac{100}{(1.4\ast10^3)\ast(10^{-6})}\approx7.14*10^4\frac{m}{s}\]
+According to this calculation, to be dominated by the quadratic drag,
+the oil drop will have to be traveling in excess of
+71.4$\frac{km}{s}$.  Anything below is dominated by the linear drag
+force.
+
+(b): At this point, I am taking the equation in Q.3. and substituting
+$c_1=(1.55\ast10^{-4})D$,$c_2=0.22D^2$,$D=0.000001$,$m=10^{-15}$\ and
+$g=9.8$.  Using these values, $v_{term}$ is calcualted to be about
+$6.3*10^{-5}\frac{m}{s}$.
+
+(c):  $v_{term}$ for the oil drop is well within the range of speeds
+to be considered linear drag dominant.  Linear drag is the term I
+would focus on for this experiment.
+
+\section*{Question 5}
+The velocity of the cyclist coasting to a stop will include the
+$f_{fr}$ and $f_{air}$.
+\begin{align*}
+m\frac{dv}{dt}&=f_{air}+f_{fr}\\
+&=-0.20\frac{N}{(\frac{m}{s})^2}v^2-3N
+\end{align*}
+Separation of variables leads to:
+\begin{align*}
+\frac{mdv}{-0.20\frac{N}{(\frac{m}{s})^2}v^2-3N}=dt
+\end{align*}
+Integrating both sides:
+\begin{align*}
+\int\frac{mdv}{-0.20\frac{N}{(\frac{m}{s})^2}v^2-3N}&=\int dt\\
+(from\  Wolfram\ Alpha)\frac{-1.29s\ m\  tan^{-1}(\frac{0.258s\ v}{m})}{kg}\approx
+  t
+\end{align*}
+Evaluating at $v=20,15,10,5,0\frac{m}{s}$ and $m=80kg$gives values for t:
+\begin{align*}
+t(20)=-142.4s,\  t(15)=-136.0s,\  t(10)=-123.9s,\  t(5)=-94.1s,\  t(0)=0s
+\end{align*}
+To go from $20\frac{m}{s}$\ to $15\frac{m}{s}$ will take about 6.4s.\\
+To go from $10\frac{m}{s}$\ to $5\frac{m}{s}$ will take about 29.8s.\\
+To go from $20\frac{m}{s}$\ to a full stop will take about 142.4s.
+\section*{Question 6}
+The equation of motion for this case would be:
+\begin{align*}
+m\frac{dv}{dt}=-mg+cv^2
+\end{align*}
+From before $v_{term}=\sqrt{\frac{mg}{c}}$, solving for c and
+substituting into the equation for motion:
+\begin{align*}
+c&=\frac{mg}{v_{term}^2}\\
+\frac{dv}{dt}&=g\left(1-\frac{v^2}{v_{term}^2}\right)
+\end{align*}
+Separating and check here for proper integration limits (fix me) integrating:
+\begin{align*}
+\frac{dv}{1-\frac{v^2}{v_{term}^2}}&=gdt\\
+\frac{v_{term}}{g}arctanh\left(\frac{v}{v_{term}}\right)&=t
+\end{align*}
+Taking the tanh of both sides and solving for v gives:
+\begin{align*}
+arctanh\left(\frac{v}{v_{term}}\right)&=\frac{gt}{v_{term}}\\
+\frac{v}{v_{term}}&=tanh\left(\frac{gt}{v_{term}}\right)\\
+v&=v_{term}tanh\left(\frac{gt}{v_{term}}\right)
+\end{align*}
+Integrating to find the position:
+\begin{align*}
+y=\frac{v_{term}^2}{g}ln\left[cosh\left(\frac{gt}{v_{term}}\right)\right]
+\end{align*}
+\end{document}
+
+

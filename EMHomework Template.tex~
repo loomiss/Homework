@@ -1,0 +1,23 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\chead{Electromagnetism HW 1}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+
+\subsection*{Question 1}
+
+
+
+\subsection*{Question 2}
+
+\subsection*{Question 3}
+
+\end{document}

@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Electromagnetism HW 1}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+
+\subsection*{Question 1}
+
+\begin{picture}(300,200)
+
+\linethickness{3pt}
+\put(100,0){\line(0,1){200}}
+\put(0,100){\line(1,0){390}}
+\put(10,80){\line(1,0){30}}
+\put(12.5,75){\line(1,0){25}}
+\put(15,70){\line(1,0){20}}
+\put(17.5,65){\line(1,0){15}}
+\put(150,150){\circle*{4}}
+\put(50,150){\circle{4}}
+\put(50,50){\circle*{4}}
+\put(150,50){\circle{4}}
+\linethickness{1pt}
+\put(150,125){\vector(0,1){20}}
+\put(150,125){\vector(0,-1){20}}
+\put(125,150){\vector(1,0){20}}
+\put(125,150){\vector(-1,0){20}}
+\put(150,75){\vector(0,1){20}}
+\put(150,75){\vector(0,-1){20}}
+\put(75,150){\vector(1,0){20}}
+\put(75,150){\vector(-1,0){20}}
+\put(50,125){\vector(0,1){20}}
+\put(50,125){\vector(0,-1){20}}
+\put(125,50){\vector(1,0){20}}
+\put(125,50){\vector(-1,0){20}}
+\put(50,75){\vector(0,1){20}}
+\put(50,75){\vector(0,-1){20}}
+\put(75,50){\vector(1,0){20}}
+\put(75,50){\vector(-1,0){20}}
+\put(25,65){\line(0,1){35}}
+\put(155,155){$q$}
+\put(122.5,155){$d_1$}
+\put(155,122.5){$d_2$}
+\put(67.5,155){$d'_1$}
+\put(155,70){$d'_2$}
+\put(40,155){$q'_1$}
+\put(155,45){$q'_2$}
+\put(40,40){$q''$}
+
+
+
+
+\end{picture}
+\\
+The infitnite plates will have induced charges on them, each
+independently will act like an imaginary charge $q'$ with the same charge but
+opposite sign as $q$.  With both of the plates together, the induced
+charges on one plate will effect the charge $q$ and also the imaginary
+charges $q'_1$ and $q'_2$.  This interaction will be like having
+another imaginary charge $q''$ in the lower left corner shown in the
+modified diagram.  This charge should be equal and opposite to the
+first imaginary charge, and thus $q'' = q$  Thus to calculate the
+force exerted on $q$, a calculation can be done as if negative charges
+$q'_1$\ and $q'_2$ as well as a positive charge $q''$ are placed in a
+quadrapole configuration.
+
+The force on $q$ is equal to the sum of the three forces:
+$F_1$ from $q'_1$, $F_2$ from $q'_2$ and $F_3$
+from $q''$.  Using equation (\ref{1}) and substituting the proper
+charge in for Q, the three forces can be found.  Adding them together
+will give the total force $\mathbf{F_T}$.
+\begin{align}
+\mathbf{F}&=\frac{1}{4\pi\epsilon_0}\frac{qQ}{r^2}\hat{r}\label{1}\\
+\mathbf{F_1}&=\frac{1}{4\pi\epsilon_0}\frac{q(-q)}{(2d_1)^2}\hat{x}\\
+\mathbf{F_2}&=\frac{1}{4\pi\epsilon_0}\frac{q(-q)}{(2d_2)^2}\hat{y}\\
+\mathbf{F_3}&=\frac{1}{4\pi\epsilon_0}\frac{q(q)}{(2d_1)^2}\frac{\sqrt{2}}{2}\hat{x}+\frac{1}{4\pi\epsilon_0}\frac{q(q)}{(2d_2)^2}\frac{\sqrt{2}}{2}\hat{y}\\
+\mathbf{F_T}&=\frac{\sqrt{2}-2}{32(d_1)^2\pi\epsilon_0}q^2\hat{x}+\frac{\sqrt{2}-2}{32(d_2)^2\pi\epsilon_0}q^2\hat{y}
+\end{align}
+\\
+\textbf{Q.1 cont}\ I am guessing that the far field potential goes like a
+$\frac{1}{r^3}$ at values of $r>>2d$, much like a quadrupole would behave.
+
+
+\subsection*{Question 2}
+
+Prove the Green's reciprocity theorem:
+
+\[
+\int_{allspace}\rho_1\phi_2d^3r=\int_{allspace}\rho_2\phi_1d^3r
+\]
+Evaluating the integral $\int\mathbf{E_1}\cdot\mathbf{E_2}d^3r$
+
+\subsection*{Question 3}
+
+The hemisphere is neutral to begin with, when placed in an electric
+field $\mathbf{E_0}$ the hemisphere will polarize.  I am not sure if
+the polarization will be as displayed here, or a more dificult
+polarization with more negative charge twords the outer rim of the
+flat surface of the sphere.
+
+\begin{tikzpicture}
+\draw (0,10) arc (0:180:1cm);
+\draw (0,10) -- (-2,10);
+\draw[->] (0   ,8.75) -- (0   ,9.75);
+\draw[->] (-.5 ,8.75) -- (-.5 ,9.75);
+\draw[->] (-1  ,8.75) -- (-1  ,9.75);
+\draw[->] (-1.5,8.75) -- (-1.5,9.75);
+\draw[->] (-2  ,8.75) -- (-2  ,9.75);
+\draw (0,9.25) node[right] {$\mathbf{E_0}$};
+\draw (-.5,10) node[above] {-};
+\draw (-.25,10) node[above] {-};
+\draw (-.75,10) node[above] {-};
+\draw (-1,10) node[above] {-};
+\draw (-1.25,10) node[above] {-};
+\draw (-1.5,10) node[above] {-};
+\draw (-1.75,10) node[above] {-};
+\draw (-.25,10.75) node[below] {+};
+\draw (-.5,11) node[below] {+};
+\draw (-.75,11.15) node[below] {+};
+\draw (-1,11.2) node[below] {+};
+\draw (-1.25,11.15) node[below] {+};
+\draw (-1.5,11) node[below] {+};
+\draw (-1.75,10.75) node[below] {+};
+\end{tikzpicture}
+
+The boundary conditions of the sphere in question are $V=0$ when $r=R$
+and $0\le\theta\le\frac{\pi}{2}$.  However, unlinke the sphere
+problem, I don't see an easy way to state that the potential is 0 for
+an entire plane.
+
+\end{document}
+
+
