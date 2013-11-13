@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{csvsimple}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Electromagnetism HW 2}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+
+\subsection*{Question 1}
+What is the bound charge distribution of an infinately long uniformly
+polarized equilateral triangle whose polarization is \textbf{P}.  What
+is the total bound charge? What is the far field electric field
+produced by the triangle?\\
+
+\begin{center}
+\includegraphics{Triangle-Dielectric.png}
+\end{center}
+
+If \textbf{P} is positive, the charges will line up to be negative on
+the bottom of the triangle and the positive charges will distribute
+along the upper two faces.  Half of the charge will be on the west
+face, and the other half will be on the east face.
+
+
+\subsection*{Question 2}
+
+
+\end{document}
+
+
