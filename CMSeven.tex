@@ -12,6 +12,9 @@
 \newcommand{\Q}[1]{\newpage \section*{#1}}
 \newcommand{\acc}[1]{\overset{..}{#1}}
 \newcommand{\vel}[1]{\overset{.}{#1}}
+\newcommand{\prt}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\LP}{\left(}
+\newcommand{\RP}{\right)}
 
 
 \pagestyle{fancy}
@@ -31,27 +34,35 @@ Consider a simple plane pendulum consisting of a mass $m$ attached to a string o
 \\
 \begin{figure}
 \centering
-\includegraphics{pendulum.png}
+\includegraphics[width=2in]{Pendulum.png}
 \end{figure}\\
 The position of the pendulum at any point in time is:
-\[\V{r}=lsin(\theta)\hat{x}-lcos(\theta)\hat{y}\]
-The length $l$ and the angle $\theta$ are both functions of time. Taking the time derivative of $r$ gives:
-\[\vel{r}=[\vel{l}sin(\theta)+lcos(\theta)\vel{\theta}]\hat{x}-[\vel{l}cos(\theta)-lsin(\theta)\vel{\theta}]\hat{y}\\\]
+\[\V{r}=lsin(\phi)\hat{x}-lcos(\phi)\hat{y}\]
+The length $l$ and the angle $\phi$ are both functions of time. Taking the time derivative of $r$ gives:
+\[\vel{r}=[\vel{l}sin(\phi)+lcos(\phi)\vel{\phi}]\hat{x}-[\vel{l}cos(\phi)-lsin(\phi)\vel{\phi}]\hat{y}\\\]
 The velocity will be used in the kinetic energy, $v^2$:
 \begin{align*}
-\vel{r}^2=&\vel{l}^2sin^2(\theta)+l^2cos^2(\theta)\vel{\theta}^2+2\vel{l}l\vel{\theta}sin(\theta)cos(\theta)\\
-&+\vel{l}^2cos^2{\theta}+l^2sin^2(\theta)\vel{\theta}^2-2\vel{l}l\vel{\theta}sin(\theta)cos(\theta)\\
-\vel{r}^2=&\vel{l}^2+l^2\vel{\theta}^2
+\vel{r}^2=&\vel{l}^2sin^2(\phi)+l^2cos^2(\phi)\vel{\phi}^2+2\vel{l}l\vel{\phi}sin(\phi)cos(\phi)\\
+&+\vel{l}^2cos^2{\phi}+l^2sin^2(\phi)\vel{\phi}^2-2\vel{l}l\vel{\phi}sin(\phi)cos(\phi)\\
+\vel{r}^2=&\vel{l}^2+l^2\vel{\phi}^2
 \end{align*}\\
 The kinetic energy $T$ is:
-\[T=\F{1}{2}m(\vel{l}^2+l^2\vel{\theta}^2)\]
-The potential energy of this system is $mgh$, where $h$ is a time dependent function of $l$ and $\theta$:
-\[h=-lcos(\theta)\]
+\[T=\F{1}{2}m(\vel{l}^2+l^2\vel{\phi}^2)\]
+The potential energy of this system is $mgh$, where $h$ is a time dependent function of $l$ and $\phi$:
+\[h=-lcos(\phi)\]
 The potential energy $U$ is:
-\[U=-mglcos(\theta)\]
+\[U=-mglcos(\phi)\]
 The Lagrangian becomes:
-\[\mathcal{L}=\F{1}{2}m(\vel{l}^2+l^2\vel{\theta}^2)+mglcos(\theta)\]
-$\mathcal{H}$
+\[\mathcal{L}=\F{1}{2}m(\vel{l}^2+l^2\vel{\phi}^2)+mglcos(\phi )\]
+The Hamiltonian is equal to:
+\[\mathcal{H}=\overset{n}{\underset{i=1}{\Sigma}}p_i\vel{q}_i-\mathcal{L},where~ p_i=\F{\partial\mathcal{L}(q,\vel{q},t)}{\partial\vel{q_i}}\]
+As stated earlier, both $l$ and $\phi$ equations vary with time and thus the Hamiltonian needs to be processed with respect to both equation sets.\\
+$\vel{l}$:
+\[p_l=\prt{\mathcal{L}}{\vel{l}}=m\vel{l}: \vel{l}=\F{p_l}{m}\]
+$\vel{\phi}$:
+\[p_\phi=\prt{\mathcal{L}}{\vel{\phi}}=2ml^2\vel\phi:\vel\phi=\F{p_\phi}{2ml^2}\]
+Writing $\mathcal{H}$ in terms of $p_\phi, p_l, \phi, l$:
+\[\mathcal{H}=\F{p_l^2}{m}+\F{p_\phi^2}{2ml^2}-\F{1}{2}m\LP\F{p_l^2}{m^2}+l^2\F{p_\phi^2}{4m^2l^4}\RP+mglcos(\phi)\]
 \end{document}
 
 
