@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\newcommand{\V}[1]{\ensuremath{\vec{#1}}}
+\newcommand{\F}[2]{\ensuremath{\frac{#1}{#2}}}
+\newcommand{\Q}[1]{\newpage \section*{#1}}
+\newcommand{\acc}[1]{\overset{..}{#1}}
+\newcommand{\vel}[1]{\overset{.}{#1}}
+
+
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Classical Mechanics HW 7}
+\rhead{15 November 2013}
+\lfoot{}
+\cfoot{\thepage\ of \pageref{LastPage}}
+\rfoot{}
+
+\begin{document}
+
+\section*{Question 1, Thornton \& Marion, 7-24}
+
+Consider a simple plane pendulum consisting of a mass $m$ attached to a string of length $l$. After the pendulum is set into motion, the length of the string is shortened at a constant rate. \[\F{\partial{l}}{\partial{t}}=-\alpha=constant\] The suspension point remains fixed. Compute the Lagrangian and Hamiltonian functions. Compare the Hamiltonian and the total energy, and discuss the conservation of energy for the system.
+\\
+\begin{figure}
+\centering
+\includegraphics{pendulum.png}
+\end{figure}\\
+The position of the pendulum at any point in time is:
+\[\V{r}=lsin(\theta)\hat{x}-lcos(\theta)\hat{y}\]
+The length $l$ and the angle $\theta$ are both functions of time. Taking the time derivative of $r$ gives:
+\[\vel{r}=[\vel{l}sin(\theta)+lcos(\theta)\vel{\theta}]\hat{x}-[\vel{l}cos(\theta)-lsin(\theta)\vel{\theta}]\hat{y}\\\]
+The velocity will be used in the kinetic energy, $v^2$:
+\begin{align*}
+\vel{r}^2=&\vel{l}^2sin^2(\theta)+l^2cos^2(\theta)\vel{\theta}^2+2\vel{l}l\vel{\theta}sin(\theta)cos(\theta)\\
+&+\vel{l}^2cos^2{\theta}+l^2sin^2(\theta)\vel{\theta}^2-2\vel{l}l\vel{\theta}sin(\theta)cos(\theta)\\
+\vel{r}^2=&\vel{l}^2+l^2\vel{\theta}^2
+\end{align*}\\
+The kinetic energy $T$ is:
+\[T=\F{1}{2}m(\vel{l}^2+l^2\vel{\theta}^2)\]
+The potential energy of this system is $mgh$, where $h$ is a time dependent function of $l$ and $\theta$:
+\[h=-lcos(\theta)\]
+The potential energy $U$ is:
+\[U=-mglcos(\theta)\]
+The Lagrangian becomes:
+\[\mathcal{L}=\F{1}{2}m(\vel{l}^2+l^2\vel{\theta}^2)+mglcos(\theta)\]
+$\mathcal{H}$
+\end{document}
+
+
