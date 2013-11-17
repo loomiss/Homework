@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\newcommand{\V}[1]{\ensuremath{\vec{#1}}}
+\newcommand{\F}[2]{\ensuremath{\frac{#1}{#2}}}
+\newcommand{\Q}[1]{\newpage \section*{#1}}
+\newcommand{\acc}[1]{\overset{..}{#1}}
+\newcommand{\vel}[1]{\overset{.}{#1}}
+\newcommand{\prt}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\LP}{\left(}
+\newcommand{\RP}{\right)}
+
+
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{PH 411 Lab 2}
+\rhead{15 November 2013}
+\lfoot{}
+\cfoot{\thepage\ of \pageref{LastPage}}
+\rfoot{}
+
+\begin{document}
+
+\section*{Lab Experiment 2}
+\subsection*{Theoretical}
+$V_{out}$ will be the voltage applied across the resistor($R_{out}$) and the three capacitors, ($C,C_{m},C_{out}$)\\
+\\
+Finding the impedance $Z_{out}$:
+\begin{align*}
+Z_{out}&=\F{1}{\F{1}{\F{-j}{\omega C}}+\F{1}{\F{-j}{\omega C_m}}+\F{1}{\F{-j}{\omega C_{out}}}+\F{1}{R_out}}\\
+&=\F{1}{\F{1}{R_{out}}-\omega\F{C+C_m+C_{out}}{j}}\\
+&=\F{jR_{out}}{j-R_{out}\omega(C+C_m+C_{out})}\\
+&=\F{R_{out}-jR_{out}^2\omega(C+C_m+C_{out})}{1+R_{out}^2\omega^2(C+C_m+C_{out})^2}
+\end{align*}
+$Z_{out}$ is in series with the resistor $R$ and the voltage drop across this combo, and the two capacitors($C_{in}, C_s$) is $V_{split}$.\\
+\\
+Finding the impedance $Z_{split}$:
+\begin{align*}
+Z_{split}&=\F{1}{\F{1}{\F{-j}{\omega C_{in}}}+\F{1}{\F{-j}{\omega C_s}}+\F{1}{R+Z_{out}}}\\
+&=\F{1}{\F{1}{R+Z_{out}}-\omega\F{C_{in}+C_s}{j}}\\
+&=\F{j(R+Z_{out})}{j-\omega(R+Z_{out})(C_{in}+C_s)}
+\end{align*}
+Before taking the complex conjugate of this step, substituting $Z_{out}$ back into the expression, because it itself is complex and needs to be accounted for.\\
+\\
+Substituting $Z_{out}$ back in:
+\[Z_{split}=\F{j\LP R+\F{R_{out}-jR_{out}^2\omega(C+C_m+C_{out})}{1+R_{out}^2\omega^2(C+C_m+C_{out})^2}\RP}{j-\omega\LP R+\F{R_{out}-jR_{out}^2\omega(C+C_m+C_{out})}{1+R_{out}^2\omega^2(C+C_m+C_{out})^2}\RP(C_{in}+C_s)}\]
+
+stuff and things about calculating the V out:
+
+\subsection*{Experiment}
+
+
+\end{document}
