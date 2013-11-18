@@ -1,0 +1,17 @@
+from __future__ import division
+import matplotlib, sys
+import pylab, numpy, os, glob
+import math
+
+
+w=numpy.arange(0,10000000,1)
+
+print w
+
+cHigh=1*10**(-6)
+rHigh=1*10**(3)
+cLow=1*10**(-10)
+rLow=1*10**(5)
+
+magHigh=w*rHigh*cHigh/((1+w**2*rHigh**2*cHigh**2)**(1/2))
+magLow=1/((1+w**2*rLow**2*cLow**2)**(1/2))
