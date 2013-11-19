@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{csvsimple}
+\usepackage{graphicx}
+\pagestyle{fancy}
+
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Thesis Proposal}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+\section*{Proposal Summary}
+(To be written after the paper)
+
+\section*{Project Description}
+
+\subsection*{Why is it important?}
+Finding better ways to simulate simple homogeneous and inhomogeneous
+fluids will allow us to study the fluids and predict how they may act
+without spending vast resources on physical experimental setups. For
+example, scientists have the capability of taking fluids down to very
+cold temperatures, but it takes large amounts of energy to do so. If
+we find a reliable simultaion that can be used instead, computers can
+be tasked at running the simulations in many configurations. This will
+save the energy required to physically test the configuration.
+
+\subsection*{Why Soft Spheres?}
+Currently hard sphere simulations are widely used (Verify) and can
+give decently accurate results, but are still not as accurate as we
+like. (melting point x2?-Verify and add) Hard sphere simulations are
+limited in capabilities. Hard spheres have either 0 or infinite
+potential interactions, they are either touching or not and are not
+allowed to overlap. One way to attempt to improve the model is to
+allow the spheres to overlap or soften their edges. By taking the
+basis of the hard sphere model, and applying a potential interaction
+to the spheres we hope to find a better more accurate model for
+fluids.
+
+\subsection*{Current Focus}
+A Monte-Carlo program is being modified to simulate a soft sphere
+theory. The data will be used to verify a density functional theory
+for soft spheres. (Density functional theory-What is it? Add info)
+
+\subsection*{Future Plans}
+The Monte-Carlo simulation could be used to test fluid transitional
+characteristics. By holding the temperature fixed and plotting
+pressure as a function of the number of spheres used, the phase
+transition of the simple fluid could be analyzed. The plot should show
+a line of pressure of which the number of sphere’s below it will be in
+a loose flowing state, and the shperes that show pressure data above
+will be in a more crystalline shape.
+
+\subsection*{Timeline}
+
+\subsubsection*{Ongoing Tasks}
+- Debug code.\\
+- Create code to plot and analyze data.
+
+\subsubsection*{July 2013}
+- Run homogeneous soft sphere Monte-Carlo for low densities in order to
+calculate g(r) and compare with analytic low density equation.\\
+- Run homogeneous soft sphere Monte-Carlo to obtain pressure data at
+various temperatures and densities.
+
+\subsubsection*{August 2013}
+- Debug code.\\
+- Compare pressure data to vivial expansion to verify correct theory.
+
+\subsubsection*{September 2013}
+- Run inhomogeneous soft sphere Monte-Carlo near hard walls with
+different packing fractions and temperatures to find density
+equatioins n(z).
+
+\subsubsection*{October 2013}
+- Run more inhomogeneous soft sphere Monte-Carlo near hard walls to
+figure out the number of spheres needed to obtain round number
+densities.
+
+\subsubsection*{November 2013}
+- Run inhomogeneous soft sphere Monte-Carlo with a spherical inner
+wall.\\
+- Compare Monte-Carlo resutls with the DFT results.
+
+\subsubsection*{December 2013}
+- Alter soft sphere Monte-Carlo to handle soft walls and/or walls with
+attraction.
+
+\subsubsection*{January 2014}
+- Begin studying DFT side of research.\\
+- Run DFT code.
+
+\section*{References Cited}
+
+(To be added later.)
+
+\subsection*{Interesting DFT Resource, may or may not use}
+
+http://www.uam.es/personal\_pdi/ciencias/jcuevas/Talks/JC-Cuevas-DFT.pdf
+
+\section*{Facilities, Equipment and Other Resources}
+The similation programs and data are stored and executed from a secure
+redundant backup system.
+
+
+\end{document}
