@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.2.22)  23 NOV 2013 16:08
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.2.22)  20 NOV 2013 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**EMTwo.tex
-(./EMTwo.tex
+**EMSix.tex
+(./EMSix.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
@@ -395,53 +395,42 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(c:/texlive/2012/texmf-dist/tex/latex/csvsimple/csvsimple.sty
-Package: csvsimple 2012/11/08 version 1.06 LaTeX CSV file processing
+) (./EMSix.aux)
+\openout1 = `EMSix.aux'.
 
-(c:/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\csv@file=\read2
-\c@csvinputline=\count119
-\c@csvrow=\count120
-\c@csvcol=\count121
-) (./EMTwo.aux)
-\openout1 = `EMTwo.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             macros/latex/contrib/pageslts/ 
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 30.
+(lastpage)             ! on input line 27.
 
 ABD: EveryShipout initializing macros
 (c:/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
+\scratchcounter=\count119
 \scratchdimen=\dimen157
 \scratchbox=\box37
-\nofMPsegments=\count123
-\nofMParguments=\count124
+\nofMPsegments=\count120
+\nofMParguments=\count121
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count125
+\MPscratchCnt=\count122
 \MPscratchDim=\dimen158
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
 \everyMPtoPDFconversion=\toks30
 ) (c:/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -491,62 +480,43 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 (c:/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 (c:/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<Triangle-Dielectric.png, id=4, 154.32657pt x 156.585pt>
-File: Triangle-Dielectric.png Graphic file (type png)
+) [1{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-<use Triangle-Dielectric.png>
-Package pdftex.def Info: Triangle-Dielectric.png used on input line 36.
-(pdftex.def)             Requested size: 154.32617pt x 156.58461pt.
+] [2]
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--53
-
- []
-
-[1{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
- <./Triangle-Dielectric.png>] [2] 
 AED: lastpage setting LastPage
-[3] (./EMTwo.aux) ) 
+[3] (./EMSix.aux) ) 
 Here is how much of TeX's memory you used:
- 10802 strings out of 493481
- 200191 string characters out of 3144398
- 245347 words of memory out of 3000000
- 13879 multiletter control sequences out of 15000+200000
- 9496 words of font info for 36 fonts, out of 3000000 for 9000
+ 10566 strings out of 493481
+ 195964 string characters out of 3144398
+ 245334 words of memory out of 3000000
+ 13652 multiletter control sequences out of 15000+200000
+ 8891 words of font info for 34 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,13n,55p,561b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,55p,416b,213s stack positions out of 5000i,500n,10000p,200000b,50000s
 <c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texl
 ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2012/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2012/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2012/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb>
-Output written on EMTwo.pdf (3 pages, 88836 bytes).
+/public/amsfonts/cm/cmsy10.pfb>
+Output written on EMSix.pdf (3 pages, 73822 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

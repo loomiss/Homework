@@ -1,0 +1,29 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{csvsimple}
+\usepackage{graphicx}
+\pagestyle{fancy}
+
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Thesis Methods}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+\section*{Methods}
+
+Monte Carlo cimulations are used to generate average sphere locations over many thousands of itterations.  The locations of the spheres can be used to obtain pressure data, and observe fluid characteristics.
+
+The Monte Carlo simulations are coded in C++, where as initiating the simulations and analysis codes are written in python.  The Monte Carlo simulations are ran on the quipu computer cluster at Oregon State University.
+
+
+
+\end{document}
