@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\newcommand{\V}[1]{\ensuremath{\vec{#1}}}
+\newcommand{\F}[2]{\ensuremath{\frac{#1}{#2}}}
+\newcommand{\Q}[1]{\newpage \section*{#1}}
+\newcommand{\acc}[1]{\overset{..}{#1}}
+\newcommand{\vel}[1]{\overset{.}{#1}}
+\newcommand{\prt}[2]{\frac{\partial{#1}}{\partial{#2}}}
+
+
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Electrodynamics 6}
+\rhead{20 November 2013}
+\lfoot{}
+\cfoot{\thepage\ of \pageref{LastPage}}
+\rfoot{}
+
+\begin{document}
+
+\section*{Problem 1}
+Find the monochromatic plane wave solution in Lorentz gauge, and derive the energy flux density.\\
+\\
+The equations for Electric and Magnetic field 
+Using Maxwell's equations:
+\begin{align*}
+(i)&~~\V{\nabla}\cdot\V{E}=\F{1}{\epsilon_0}\rho,  &  (iii)&~~\V{\nabla}\times\V{E}=-\prt{\V{B}}{t},\\
+(ii)&~~\V{\nabla}\cdot\V{B}=0,&  (iv)&~~\V{\nabla}\times\V{B}=\mu_0\V{J}+\mu_0\epsilon_0\prt{\V{E}}{t}.
+\end{align*}
+In statics, the curl of $\V{E}=0$ however in dynamics, the curl of $\V{E}\ne0$ and the divergence of $\V{B}$ is still 0. Rather than using the electric potential, the magnetic potential will be used:
+\[\V{B}=\V{\nabla}\times\V{A}\]
+The curl of $\V{E}$ becomes:
+\begin{align*}
+\V{\nabla}\times\V{E}&=-\prt{\V{B}}{t}=-\prt{}{t}(\V{\nabla}\times\V{A})\\
+\V{\nabla}\times\V{E}&+\V{\nabla}\times\prt{\V{A}}{t}=\V{\nabla}\times\left(\V{E}+\prt{\V{A}}{t}\right)=0
+\end{align*}
+Since the curl of this thing is equal to 0, it can be set as the gradient of a scalar:
+\begin{align*}
+\V{E}+\prt{\V{A}}{t}&=-\V{\nabla}V\\
+\V{E}&=-\V{\nabla}V-\prt{\V{A}}{t}
+\end{align*}
+Maxwell's (i) becomes:
+\[\nabla^2V+\prt{}{t}(\V{\nabla}\cdot\V{A})=-\F{1}{\epsilon_0}\rho\]
+Maxwell's (iv) becomes:
+\[\V{\nabla}\times(\V{\nabla}\times\V{A})=\mu_0\V{J}-\mu_0\epsilon_0\V{\nabla}\left(\prt{V}{t}\right)-\mu_0\epsilon_0\prt{^2\V{A}}{t^2}\]
+The curl of the curl of the magnetic potential is:
+\[\V{\nabla}\times(\V{\nabla}\times\V{A})=\V{\nabla}(\V{\nabla}\cdot\V{A})-\nabla^2\V{A}\]
+\[\V{\nabla}(\V{\nabla}\cdot\V{A})-\nabla^2\V{A}=\mu_0\V{J}-\mu_0\epsilon_0\V{\nabla}\left(\prt{V}{t}\right)-\mu_0\epsilon_0\prt{^2\V{A}}{t^2}\]
+Rearranging:
+\[\left(\nabla^2\V{A}-\mu_0\epsilon_0\prt{^2\V{A}}{t^2}\right)-\V{\nabla}\left(\V{\nabla}\cdot\V{A}+\mu_0\epsilon_0\prt{V}{t}\right)=-\mu_0\V{J}\]
+In the Lorenz gauge:
+\[\V{\nabla}\cdot\V{A}=-\mu_0\epsilon_0\prt{V}{t}\]
+The above becomes:
+\[\left(\nabla^2\V{A}-\mu_0\epsilon_0\prt{^2\V{A}}{t^2}\right)=-\mu_0\V{J}\]
+No free charge:
+\[\nabla^2V=\mu_0\epsilon_0\prt{^2V}{t^2}\]
+No free current:
+\[\nabla^2\V{A}=\mu_0\epsilon_0\prt{^2\V{A}}{t^2}\]
+
+
+\Q{Problem 2}
+In the monochromatic plan wave solution using Coulomb gauge, we have $\V{A}=\V{A}_0exp[i(\V{k}\cdot\V{r}-\omega t)]$.  In class, we only considered the case of a linear polarized light, meaning $\V{A}_0$ is a real vector.  Now when $\V{A}_0=A_x\hat{x}+iA_y\hat{y}$, derive the corresponding (real) $\V{E}$ and $\V{B}$ field, as well as the energy density and energy flux density.
+\end{document}
+
+
