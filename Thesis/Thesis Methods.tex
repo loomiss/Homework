@@ -31,7 +31,7 @@ Monte Carlo simulations are used to generate average sphere locations over many 
  When a sphere moves it interacts with other spheres and the total energy of the system changes.  The move is accepted if it passes a Boltzmann factor probability check:  $P=e^{-\beta\Delta E}$.  If the energy after a move is completed is lower than before, the move is always accepted because the Boltzmann factor check will always be greater than 1.  If the energy is higher, the move may or may not be accepted, as the change in energy goes up, the chance of a successful move goes down.  One itteration is complete after every sphere has had a chance to move.  After every itteration, the location of each sphere is saved, and the final output is the average location of the spheres over all the itterations completed.  The simulations are allowed to run for extended periods of time on the OSU quipu cluster.  The plot shown on the next page is from a simulation that has 36 million iterations completed and is still under 1\% "complete".
 
 To observe different characteristics of fluids, the Monte Carlo simulation can be ran under different configurations.  The two configurations primarliy observed are the Homogeneous and Wallz.
-The wallz configuration is used to observe how the spheres settle near a wall constraining the spheres in the z direction.
+The Wallz configuration is used to observe how the spheres settle near a wall constraining the spheres in the z direction.
 \begin{figure}[h]
 \centering
 \includegraphics[width=3in]{walls-50.pdf}
@@ -43,7 +43,12 @@ The Homogeneous simulation is used to obtain radial distribution functions.  The
 \includegraphics[width=3in]{radial-distribution-50.pdf}
 \caption{Example of Radial Distribution Functions}
 \end{figure}\\
-
+\\
+(Add information about finding pressure from the Monte Carlo simulation)\\
+\\
+(Add information about how to obtain the density plot, radial distribution)\\
+\\
+The Monte Carlo simulations are coded in C++, data analysis and scripting programs are written in python. (Maybe take this out all together)
 
 
 \end{document}

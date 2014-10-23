@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.2.22)  23 NOV 2013 16:08
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.2.22)  27 JAN 2014 14:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,7 +524,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--53
 
 [1{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./Triangle-Dielectric.png>] [2] 
+ <./Triangle-Dielectric.png>] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
+
+ []
+
+
 AED: lastpage setting LastPage
 [3] (./EMTwo.aux) ) 
 Here is how much of TeX's memory you used:
@@ -534,7 +539,7 @@ Here is how much of TeX's memory you used:
  13879 multiletter control sequences out of 15000+200000
  9496 words of font info for 36 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,13n,55p,561b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,13n,55p,563b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
 <c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texl
@@ -543,7 +548,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2012/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2012/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb>
-Output written on EMTwo.pdf (3 pages, 88836 bytes).
+Output written on EMTwo.pdf (3 pages, 91004 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

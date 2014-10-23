@@ -1,0 +1,35 @@
+
+# Usage Examples (the = is the delimiter between command and argument used in a program):
+#	identity
+#	function = 0.10
+#	frequency = 1.3e5
+#	output = on
+
+protocol = tek_afg3000
+
+identity = *idn?
+clear queue = *esr?
+function = function			# add an argument such as sin
+frequency = frequency 		# add an argument such as 1.0e3
+amplitude = voltage:amplitude		# 0.10	  # amplitude is acutally pk-pk
+offset = voltage:offset					# 0
+phase = phase:adjust					# 0
+load = output:impedance				# 2e+3
+output = output:state					# on or off
+
+protocol = rigol_dg1022
+
+identity = *idn?
+clear queue = *idn?				# no *esr? analog?
+remote = system:remote		# control via usb
+local = system:local				# control via front panel
+output = output				# on or off
+function = function 			# sin
+frequency = frequency		# 1.0e3
+vpp = voltage:unit vpp
+amplitude = voltage			# 0.10
+offset = voltage:offset		# 0
+phase = phase					# 0
+load = output:load			# 1.0e3
+
+

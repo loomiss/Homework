@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{csvsimple}
+\usepackage{graphicx}
+
+
+\newcommand{\V}[1]{\ensuremath{\vec{#1}}}
+\newcommand{\F}[2]{\ensuremath{\frac{#1}{#2}}}
+\newcommand{\Q}[1]{\newpage \section*{#1}}
+\newcommand{\acc}[1]{\overset{..}{#1}}
+\newcommand{\vel}[1]{\overset{.}{#1}}
+\newcommand{\prt}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\LP}{\left(}
+\newcommand{\RP}{\right)}
+
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Math Methods Homework 1}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+\section*{2. First-Order, Separable Differential Equations}
+Find the general solution of each of the followiing differential equations.  Use Boas Chapter 8 Section 2 for review f an apprpriate technique.
+\subsection*{(a)}
+\begin{align*}
+y'&=\F{x^2}{y}\\
+\F{dy}{dx}&=\F{x^2}{y}\\
+ydy&=x^2dx\\
+\int ydy&=\int x^2dx\\
+\F{y^2}{2}&=\F{x^3}{3}+C\\
+y&=\pm\sqrt{\F{2}{3}x^3+C}
+\end{align*}
+\subsection*{(b)}
+\begin{align*}
+xy'-xy&=y\\
+x\LP\F{dy}{dx}-y\RP&=y\\
+\F{1}{y}\LP\F{dy}{dx}-y\RP&=\F{1}{x}\\
+\F{dy}{y}-dx&=\F{dx}{x}\\
+\F{dy}{y}&=\LP\F{1}{x}+1\RP dx\\
+\int\F{dy}{y}&=\int\LP\F{1}{x}+1\RP dx\\
+ln(y)&=ln(x)+ln(c)+x\\
+y&=cx+e^x
+\end{align*}
+\subsection*{(c)}
+\begin{align*}
+xy'-xy&=x\\
+\F{dy}{dx}-y&=1\\
+\F{dy}{dx}&=y+1\\
+\F{dy}{y+1}&=dx\\
+ln(y+1)&=x+c\\
+y+1&=e^{x+c}\\
+y&=e^xe^c-1\\
+y&=ce^x-1
+\end{align*}
+\section*{3. Quadratic Drag}
+An object is moving in one direction which is only subject to one force, quadratic drag, given by:
+\begin{align*}
+-cv^2
+\end{align*}
+where $v$ is the velocity of the object and $c$ is a constant. Write the equation of motion for this object and solve for the velocity at any time $t$ for an initial velocity of $v_0$.\\
+\\
+Assuming $c$ already has the mass of the object divided out, the acceleration of the object is $a=-cv^2$.\\
+\\
+$a$ is the time derivative of the velocity $v$ and $v$ is the time derivative of the position $x$ thus:
+\begin{align*}
+v&=\F{dx}{dt}\\
+a&=\F{dv}{dt}=\F{d^2x}{dt^2}
+\end{align*}
+Solving for $v$:
+\begin{align*}
+\F{dv}{dt}&=-cv^2\\
+-\F{dv}{v^2}&=cdt\\
+\F{1}{v}&=ct+C\\
+v&=\F{1}{ct+C}
+\end{align*}
+Since $v(t=o)=v_0$, $\F{1}{C}=v_0$
+\begin{align*}
+v&= \F{v_0}{cv_0t+1}
+\end{align*}
+The above shows the equation for $v(t)$, seperating variables one more time will give the equation of motion.
+\begin{align*}
+\F{dx}{dt}&=\F{v_0}{cv_0t+1}\\
+\int dx&=\int\F{v_0dt}{cv_0t+1}\\
+x&=\F{1}{c}ln(cv_0t+1)+C
+\end{align*}
+\end{document}

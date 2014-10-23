@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{csvsimple}
+\usepackage{graphicx}
+\usepackage{array}
+\pagestyle{fancy}
+
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Physics 481 Lab 1 Lenses}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newcommand{\F}[2]{\frac{#1}{#2}}
+
+\begin{document}
+\section*{Introduction}
+The objective of this lab is to gain a familiarness with lenses and how to calculate their focal points, as well as how a chain of lenses will respond.
+
+\section*{Theory}
+\subsection*{Experiment 1.1: Thin Lenses}
+Experiment 1 shows how lenses magnify in accordance to the thin lens euation.  The focal point of a lens shouldn't change, however, the image observed will change depending on how far away an object is.  The thin lens equation allows a calculation for the focal point of a lens.  The lense equation is, $\F{1}{f}=\F{1}{S_o}+\F{1}{S_i}$ where $f$ is the focal point of the lense, $S_o$ is the distance between the origional object and the lens, and $S_i$ is the distance between the object image and the lens.  This experiment uses positive, negative, and a combination of both lenses to illustrate how the lens equation works.
+
+\subsection*{Experiment 1.2: Alignment}
+Experiment 2 is a walk through on getting a laser aligned in order to perform experiment 3.
+
+\subsection*{Experiment 1.3: Expanding Laser Beams}
+Experiment 3 is a walk through on how to increase the size of a laser beam through the use of two lenses.  When set up just right, the first lense will begin to expand the laser, and the second lens will stunt the growth of the expanding laser, and project the laser with a uniform diameter.
+
+\section*{Experiment}
+\subsection*{1.1 Thin Lens}
+Experiment 1 follows Newport's Projects in Optics \#1-12 on pages 52 and 53 provided at the bottom of the lab manual. \\
+\\
+Start by creating a paper with gridlines spaced 5mm apart this will now be called the object.  This provides a pattern that will project through a lens and onto a target.  A high power lamp is placed behind the paper and projects the gridlines down the rail.\\
+\\
+The first lens is a 100mm focus lens, mounted 12.5cm away from the object.  The lens itself needed adjusting to allow for optimal light passing through.  A target piece of paper is then mounted on a sliding holder on the other side of the rail.  Pull the target twords the lens until the image gets blurry again, and adjust back and forth untill a crisp image is observable.  Once the image is observable, mark two gridlines and count the number of squares in between them.  This will allow the magnification to be calculated.  To get a nice spread of data, the lens is placed at varying distances from the object, and the whole process of finding the image and marking the lines is repeated.  After collecting 6 different object and image distances, the lens is moved back to the 125mm distance, and the target is locked down at its image distance.  Now the lens is slid twords the target, untill the image becomes visible again.  Make note of the new object and image distances.\\
+\\
+The next setup will be two lenses, a negative and a positive.  The image created by the negative lens will be virtual, and there is no way to physically observer the image with the negative lens alone.\\
+\\
+The negative "25.4mm" lens is mounted 200mm away from the object, and the "100mm" lens is placed 150mm away from the negative lens.  The positive lens is then adjusted untill the image becomes clear.  Make note of the distances.  The "object" for the positive lens is the virtual image created by the negative lens.  Using the distances found, and knowing the focus of the 100mm lens (all the data from the first part)  The focal distance for the negative lens can be calculated.
+
+\subsection*{1.2: Alignment}
+Experiment 2 followed the lab manual.  The only notable problem was the second mirror was loose and needed drastic physical adjustment to the location of the base, and tightening of the base, before the alignment of the laser could be finished.
+
+\subsection*{1.3: Expanding Laser}
+Experiment 3 followed Newport's Projects in Optics \#5-10 and \#1-3 on pages 57 and 58.  There is a difference, the newport projects have the telescope set up between mirror 1 and 2, however, the physical setup was done entirely on the rail.  To see a rough sketch of how the lenses were set up, observe the sketch at the top of page 4 in the appended lab notes.  Another difference, the manual called for the use of a 200mm focus lens, this lens could not be located, and thus a 300mm lens was used in place of it.  after setting up the telescope, clipping was observed, and so the 300mm focus was removed and replaced by a 100mm focus lens.  This took care of the clipping and allowed the full diameter of the laser to be measured.\\
+\\
+Start with the laser aligned following experiment 2.  Remove the irises and place the negative focus lens approximately 5 inches from the second mirror.  Next, place the positive lens(100mm or 200mm) a distance away from the negative lens equal to the sum of their focuses (100mm lens was placed 75mm away).  Place another mirror at the far end of the rail, and adjust so that it is reflected back through the lenses, but does not enter the laser emitter.  Adjust the position of the positive lens back and forth, untill the origional laser beam and the reflected laser beam are the same size.  The origional beam comming from the positive lens should be of uniform thickness at this point.  Take measurements of the diameter of the unmodified laser beam and the larger beam created after going throught he telescope.  These will allow the calcualtion of the magnification value of the telescope created.  Skip the divergence. Repeat this process with a different lens in place of the negative focus and calculate the new magnification value.
+\section*{Results}
+\subsection*{1.1: Thin Lens}
+\begin{tabular}{| >{\centering}p{2.5cm} | >{\centering}p{2.5cm} | >{\centering}p{2.5cm} | >{\centering}p{2.5cm} | >{\centering}p{2.5cm} |}
+\hline Object Distance ($S_o$) & Squares (x5mm) & Image Distance ($S_i$) & Measured Image Height & Calculated Focus (f) \tabularnewline
+\hline 125mm & 5 (25mm) & 44.65mm & 90.5mm & 97.7mm\tabularnewline
+\hline 150mm & 6 (30mm) & 281.0mm & 56.9mm & 97.8mm\tabularnewline
+\hline 200mm & 9 (45mm) & 198.0mm & 45.5mm & 99.5mm\tabularnewline
+\hline 400mm & 9 (45mm) & 130.0mm & 15.7mm & 98.1mm\tabularnewline
+\hline 600mm & 5 (25mm) & 121.0mm & 5.0mm & 100.7mm\tabularnewline
+\hline 446.5mm & 4 (20mm) & 125.0mm & 5.0mm & 97.7mm\tabularnewline
+\hline
+\end{tabular}\\
+\\
+\begin{tabular}{| >{\centering}p{8cm} | >{\centering}p{2.5cm} |}
+\hline "Telescope" &\tabularnewline
+\hline Negative lens object distance & 200mm\tabularnewline
+\hline Positive lens image distance & 239.5mm\tabularnewline
+\hline Distance between positive and negative & 150mm\tabularnewline
+\hline Positive lens focus (average from 6 calculated values) & 98.6mm\tabularnewline
+\hline Calculated positive lens object distance & 167.6mm\tabularnewline
+\hline Calculated negative lens image distance(150-167.6) & -17.6mm\tabularnewline
+\hline Calculated negative lens focus & -24.3mm\tabularnewline
+\hline
+\end{tabular}
+\subsection*{1.3: Expanding Laser}
+\begin{tabular}{| >{\centering}p{2.5cm} | >{\centering}p{2.5cm} | >{\centering}p{2.5cm} | >{\centering}p{2.5cm} | >{\centering}p{2.5cm} |}
+\hline Lens \#1 & Lens \#2 & Origional Beam & Expanded Beam & Magnification\tabularnewline
+\hline -25mm & 100mm & 1.5mm & 13.5mm & 9\tabularnewline
+\hline 25mm & 100mm & 1.5mm & 5.5mm & 3.67\tabularnewline
+\hline
+\end{tabular}
+\section*{Uncertainty}
+The main error in measurements are from eyeballing the mark of measurement on the rulers.  All values reported are +/- 3 on the lowest digit reported.  This error could be improved by higher end measureing equipment, however, using the tools and eyes available, this error will likely not be reduced.  
+\section*{Discussion}
+The focal point for the "100mm" lens was calculated to have a focal distance of 98.3mm, this is really close to the given value, and any discrepency could be reconciled with more precise measuring.  The negative lens was calculated to have a focal distance of -24.3mm and the value supplied was -25mm.  This value was also really close.\\
+\\
+The magnification results are interesting, using a negative focus lens first provides a much higher overall magnification.
+\section*{Conclusions}
+Performing this lab gives a general familiarization of how lenses work.  When using a chain of lenses, each lens will use the image of the previous lens as the object for its projected lens.
+\end{document}

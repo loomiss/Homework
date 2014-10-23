@@ -1,0 +1,1 @@
+Multiple csv or txt files within one directory can be read.  Graphs of data from both files will then be plotted simultaneously.

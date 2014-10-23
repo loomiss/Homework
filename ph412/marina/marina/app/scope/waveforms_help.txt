@@ -1,0 +1,2 @@
+
+Use in conjunction with the tek_scopes.py module.  Select the scope from the tek_scopes tab, and enter the channels to be acquired.  They can be specified as 1,2 or 1,1 or 1,2,2,2 and so forth.  The scope parameters will be automaticallly read from the selected scope.

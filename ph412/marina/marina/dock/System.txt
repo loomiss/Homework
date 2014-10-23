@@ -1,0 +1,25 @@
+# List of subdirectories to be searched for the modules to be imported outside PYTHONPATH.
+# This must precede the lines specifying modules to be imported.
+
+# Core directories.  Do not modify this line.
+dirs = dock/frames, dock/editors, dock/notebook_plots, dock/plot, dock/files, dock/d_struct, dock/pywin
+
+# Hardware directories.  Do not modify this line.
+dirs = hardware/ni, hardware/device_comm
+
+# Marina application directories relative to the core path.  Do not modify this lines.
+dirs = app/data_analysis, app/scope, app/pci_6221, app/tests
+
+# System modules are not represented by tabs but are accessible by all modules.  Multiple such "System =" lines are permitted.
+# One module is required to contain each of the following strings in the name: frame, tab, controls, text_editor
+# If more than one module with one of these strings is specified, then only the last instance will be used.
+# Other likely system modules are: matplotlib, numpy, scipy, struct, inspect, string, os, sys, ... .
+# wx is automatically imported, so it must not be specified. 
+
+# Core functionality modules.  Do not modify these lines.
+System = numpy, struct, string, time		
+System = frame_spec, tab_spec, text_editor_simple, controls_library
+
+System = notebook_plots_base, notebook_plots_graph
+System = response_plot_files, response_plot_base, response_plot
+System = excel, data_struct

@@ -1,0 +1,213 @@
+﻿--Commit 92--
+
+Changes:
+--Reworked Visa communication libraries.
+--All tabs work in a Windows enviroment.
+--Fixed several small bugs that would cause Marina to crash
+
+Plans:
+--Rework scan2 to use new visa libraries and create a tab for use in Marina.
+--Create functional libraries for using usbtmc.
+--Fix bugs that prevent Marina from completely closing.
+--Rework the method for defining controls on a tab.
+
+--Commit 73--
+
+Changes:
+--Added some additional documentation.
+--Updated file_plot_basic to work with the new tab structure.
+--Removed controls_library dependency on tab spec.
+--Made the GUIs work with waveforms, tek_scope, and pci_6221. Controls for these tabs do not yet work.
+
+Plans:
+--Continue modifying tab modules to work with Marina.
+--Find bug that doesn't allow Marina to exit once a text editor or matplotlib window has been opened.
+--Find bug that prohibits tab deltion due to naming differences.
+--Simplify control creation. Currently, blocks of code must be pasted into a tab from tab_spec to allow compatibility with controls_library. 
+
+--Commit 70--
+
+Changes:
+--Changed all documentation in dock to work with epydoc
+--Tab objects are deleted upon tab closure.
+--Frames are now closed when the last tab is closed.
+
+Plans:
+--Implement tab control creation.
+--Change over all existing tab modules to the new format.
+
+--Commit 69--
+
+Changes:
+--Finished implementing a simple test frame that will later serve as a skeleton for creating tabs.
+--Forwarded functions from frame_spec to allow tab creation from dock.
+--On the fly tab creation and frame creation from modules.py are working with the new frame style.
+--Several instances of the same tab can now be created, each with thier own object.
+
+Plans:
+--Change Modules to use the new tab creation form.
+--Do away with some coupled variables within dock
+--Assure object destruction when exiting frames and tabs.
+
+--Commit 67--
+
+Changes:
+--Moved tab tracking to the Notebook object which is contained by a frame.
+--Added the ability to make several instances of the same tab.
+--Began implementation of a test module that inhertits from wx.Panel. If Successful, this test module can later be used as a skeleton for creaing new tabs.
+
+Plans:
+--No changes from previous plans.
+
+
+--Commit 64--
+
+Changes:
+--Remove tab object tracking from dock. Tabs will be tracked by their respective frames. 
+--Added Tab creation function to frame_spec(not yet implemented)
+--Added the ability to retrieve tabs form frames.
+
+Plans:
+--Have all GeneralModule classes inherit form wx.panel. Change class name to something like TabClass.
+
+--Commit 59--
+
+Changes:
+--Tab objects are now stored in a dictionary so one can keep track of which frame they are in. This is useful but makes passing frame instances to tab modules more difficult. Using inheritance could eliminate the need for post creation configure and solve this difficulty. However, this type of change would be substantial and could take a significant amount of time. 
+
+Plans:
+--Explore the possibility of using inheritance to simplify user tab modules.
+--Continue work on all plans from Commit 55 and 52.
+
+--Commit 55--
+
+Changes:
+--Colors now work for all frames and tabs.
+--Frames start minimized in Windows until a rendering issue can be resolved.
+
+Plans:
+--Add the ability to make multiple instances of the same tab without using the same object.
+--Assure object destruction when tabs are closed.
+--Modify all current apps to work with the changes in Marina.
+--Write Skeleton code for a GenericModule and modules.py
+--Make all software for 400 series electronics work with marina.
+
+
+--Commit 52--
+
+Changes:
+--Made all buttons work on file plot basic
+--Created a help file with simple message. It can be customized to file_plot_basic functionality later.
+
+Plans:
+--Get frame colors working for frames created after the initial setup.
+--Modify all current apps to work with the new implementation of marina.
+--Add all modules for 400 series electronics to marina.
+--Write skeleton code for modules.txt and GenericModules to simplify tab creation.
+
+--Commit 48--
+
+Changes:
+--Fixed a problem where new tabs would not be added to modules properly
+--Post creation configure seems to be working properly (tested with file_plot_basic). If possible, it should only be used for compatibility with older modules.
+
+Plans:
+--Fix the About button on tabs (at least on file_plot_basic).
+--Modify current modules to work with the new marina revision
+--Get the modules used in the 400 series electronics labs up and running in marina
+
+--Commit 47--
+
+Changes:
+--Negligible
+
+Plans:
+--Get post creation configure working properly
+--Find reason frames created on the fly have different inoperable buttons than those created at initialization
+--Look for a way to rid of post creation configure. Possibly have tabs create new frames if needed, this may be easier.
+
+--Commit 43--
+
+Changes:
+--The ability to add frames and tabs on the fly has been added. Controls in tabs created this way do not yet function properly.
+
+Plans:
+--Modify the program initialization to use the new frame and tab creation functions.
+--Add control functionality to tabs created with the new functions. 
+--Continue to decouple code and remove un-necessary variables.
+
+--Commit 40--
+
+Changes:
+--Added the ability for the master object to detect screen size
+--Moved GUI generation to the master object in dock.py
+--Began work on general functions to create frames on the fly
+--Removed and changed several lines of unnecessary code.
+--Removed most references to out of module variables.
+--Added a function to detect if a frame will be drawn off screen.
+
+Plans:
+--Finish implementation of functions to create tabs and frames on the fly.
+--Incorporate the new functions into the initialization of Marina.
+
+--Commit 34--
+
+Changes:
+--Modified PostCreationConfigure for file_plot_basic to work with changes in dock.
+
+--Commit 33--
+
+Changes:
+--Restored Marina to a working state with all new core changes.
+--Added slight modification to frame_spec and tab_spec to make them work with dock.
+
+Plans:
+--Do an extensive analysis on the inner workings of frame_spec and tab_spec, many possible errors were overlooked to restore functionality
+--Continue pursuit to allow frame creation and destruction on the fly.
+
+--Commit 32--
+
+Changes:
+--Changed name of frame_modules to frame_objects because it better represents what data type it is holding
+--Created a new dictionary tab_objects to hold tab objects. This new dictionary will be keyed by frame name and will contain a list of tab objects for the value.
+--Prototyped the functions for creating individual frames and tabs.
+
+Plans:
+--Modify frame_spec.py and tab_spec.py to work with the modifications done to dock.py.
+--Add ability to create and destroy frames on the fly.
+
+--Commit 31--
+
+Changes:
+--Re-purposed frame_modules dictionary in dock to hold frames and created tab_modules dictionary to hold tab modules.
+--Began writing new functions in dock.py to pass varibale data arount in an attempt to decouple portions of the code.
+--Added underscores to the beginning of all internal functions in dock.py
+
+Plans:
+--Modify frame_spec.py and tab_spec.py to get a working version of marina up and running.
+--Continue efforts to allow tabs and frames to be created and destroyed on the fly.
+
+--Commit 29--
+
+Changes:
+--Fixed frame import implementation to use new structure mentioned in commit 27.
+--Deleted functions that are no longer in use.
+--Added more comments to explain code functionality.
+
+Plans:
+--Allow frames and tabs to be created and destroyed on the fly.
+
+--Commit 27--
+
+Changes:
+--Re-purposed frame_modules to hold frame names and associated tabs in the following format:
+{"Frame Name":[tab module 1, tab module 2, tab module 3]}
+--Checks for required imports now happen directly after each import to allow easier "on the fly" importing.
+--Changed the format of how frames are defined in modules.txt to the following:
+Frame = tabs:module1;module2;module3, name:Frame Name, size:width:height, bkg_color:red;green;blue
+--Changed the format of this file to contain change history.
+--Marked unneeded variables in dock.py as obsolete. Will be deleted in the future.
+
+Plans:
+--Change frame import implementation to support the new structure.
+--Allow frames and tabs to be created and destroyed on the fly.

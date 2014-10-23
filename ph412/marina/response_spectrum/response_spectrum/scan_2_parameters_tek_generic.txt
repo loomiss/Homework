@@ -1,0 +1,59 @@
+## Parameter file for scan_2.py
+>validation
+scan_2.py
+
+## Declare instruments to be used as the instrument name and serial number.
+>instruments
+fg AFG3021B ?	#C031180 # instrument and serial number
+scope TDS2014B ?	#C0407187
+
+## Function generator parameters
+>fg
+function sine;frequency 10e4
+voltage:amplitude 1.0;:voltage:offset 0;phase:adjust 0  # amplitude is acutally pk-pk
+output:impedance 2E+3;:output:state on
+
+## Oscilloscope parameters
+>scope
+verbose on      # Full headers will be returned with responses.
+header on       # Return headers with responses.
+select:ch1 1;ch2 1
+ch1:probe 1;:ch2:probe 1
+ch1:coupling ac;:ch2:coupling ac
+ch1:bandwidth off;:ch2:bandwidth off
+trigger:main:mode normal
+trigger:main:type edge
+trigger:main:edge:source ext
+trigger:main:edge:slope rise
+trigger:main:level 0.7  # Seems necessary for external TTL trigger
+horizontal:position 0   # Position of the trigger point on the screen
+acquire:numavg 4;mode average;state 1   # Number of sweeps over which to average
+#acquire:numavg 16;mode sample;state 1  # Single sweep sample mode signal is noiser, but data looks about the same on the logarithmic
+data:width 1;encdg ascii     # In response to a curve? command, one byte encoded in ascii will be sent for each data point. Used in phase determination
+
+##Operational parameters
+>op
+## Declare which variable to scan: frequency or Vin
+scan variable = frequency   # frequency or Vin
+
+## Frequency scan parameters
+steps = 10      # step per entire linear or decade range of frequency
+#linear frequency range = 0.4e06, 4.0e06
+#xaxis = linear   # linear or log10 for amplitude and phase, default is log10
+#yaxis = linear         # db or linear.  db is only possible for the amplitude, not the phase. Default is db.
+decadic frequency range = 2.0, 5.0
+xaxis = log10   # linear or log10 for amplitude and phase, default is log10
+yaxis = db         # db or linear.  db is only possible for the amplitude, not the phase. Default is db.
+gain =1.0     # Expected maximum gain = vout/vin
+input amplitude = 1.0     # Input Vpp.
+
+## Vin scan parameters
+function = sin              # Function to apply to the circuit
+frequency = 1e+03           # Frequency at which to scan the input signal range.
+impedance = 1e+04   # Circuit input impedance used to set the output impedance on the function generator.
+linear input range = 0, 5   # Amplitude (Vpp/2) in Volts
+#decadic input range = 0, 0.317  # Log10(amplitude in Volts)
+#steps = 40
+#xaxis = log10   # linear or log10 for amplitude and phase, default is log10
+#yaxis = db         # db or linear.  db is only possible for the amplitude, not the phase. Default is db.
+initial gain = 100  # Expected absolute value of the initial gain

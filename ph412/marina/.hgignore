@@ -1,0 +1,10 @@
+syntax: glob
+
+# Dont track .pyc files
+*.pyc
+
+# Dont track Geany batch files
+geany_run_script.bat
+
+# Dont track vim temp files
+.*.swp

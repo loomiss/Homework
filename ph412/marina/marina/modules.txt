@@ -1,0 +1,26 @@
+# Path to the Marina package, either absolute or relative.  Edit this line as needed. (Not currently used)
+core_path = 
+
+# Here is where you may declare frames and corresponding tabs that will be
+# created upon initializtion of Marina. Use the following syntax to include 
+# frames and tab in the initilization process:
+# Frame = tabs:tab_module_1;tab_module_2;etc..., name:Frame Name, size:width;height, bkg_color:red;green;blue
+#
+# The "Frame =" key at the beginning of the line tells the file parser that you
+# would like to create a frame. Under "tabs:" list the modules that define tab
+# functionality for the frame. If more than one module is listed they must be 
+# seperated by a semicolon. The last module of the list should be followed by
+# a comma. The "name:" key specifies the name of the frame to be created. This 
+# name can be used to reference the frame and will be displayed at the top of 
+# the frame window. The name should also be followed by a comma. The "size:" 
+# key sets the initial size of the frame. It should be followed by two numbers 
+# seperated by a semicolon representing the width and height in pixels, 
+# followed by a comma. The last key "bkg_color:" denotes the background color
+# of the frame. This should be followed by 3 numbers seperated by semicolons.
+# Thes numbers represent the intensities of red, green and blue. These numbers 
+# can range from 0 to 255.
+
+#Frame = tabs:file_plot_basic,          name:Data File Analysis,             size:900;450,  bkg_color:150;210;200
+#Frame = tabs:pci_6221,                 name:PCI 6221 Analog and Digital IO, size:1050;550, bkg_color:150;200;220
+#Frame = tabs:test_tab,                 name:Test,                           size:900;900,  bkg_color:100;50;150
+Frame = tabs:waveforms,                name:Oscilloscope Signals,           size:900;600,  bkg_color:150;210;200
