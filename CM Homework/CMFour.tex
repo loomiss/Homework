@@ -19,9 +19,47 @@
 \subsection*{1. Taylor, Problem 3.10}
 Consider a rocket(initial mass $m_0$ accelerating from rest in free space).  At first, as it speeds up, its momentum $p$ increases, but as its mass $m$ decreases $p$ eventually begins to decrease.  For what value of $m$ is $p$ maximum?\\
 \\
-Initial momentum $p_0 = m_0v_0 = 0$\\
+The total momentum of the rocket at time t is:
+\begin{align*}
+P(t)=mv
+\end{align*}
+A short time later $t+dt$ the mass of the rocket has changed to $m+dm$ and the velocity of the rocket has changed to $v+dv$.  There has also been fuel ejected, the mass of the fuels is $-dm$ and it's velocity compared to a stationary frame is now $v-v_{ex}$. The total momentum of the rocket and the ejected fuel at this new time, ignoring the double infitessimal $dmdv$ is:
+\begin{align*}
+P(t+dt)=(m+dm)(v+dv)-dm(v-v_{ex})=mv + mdv +v_{ex}dm
+\end{align*}
+The change in total momentum over this time period is:
+\begin{align*}
+dP=P(t+dt)-P(t)=mdv+v_{ex}dm
+\end{align*}
+The change in total momentum is 0, because no external forces are acting apon the system. Thus:
+\begin{align*}
+mdv=-v_{ex}dm
+\end{align*}
+Separation of variables allows us to solve for the velocity of the rocket as a function of its mass:
+\begin{align*}
+dv=-v_{ex}\frac{dm}{m}
+\end{align*}
+If the exhaust velocity is constant, integration gives:
+\begin{align*}
+v-v_0=v_{ex}ln(m_0/m)
+\end{align*}
 
 
+
+
+
+
+
+
+
+\subsection*{2. Taylor, Problem 3.14}
+Consider a rocket subject to a linear resistive force,
+$f = −bv$, but no other external forces. Use the equation $m\dot{v} = −v_{ex}\dot{m} +
+F_{ext}$ (from Problem 3.11) to show that if the rocket starts from rest and
+ejects mass at a constant rate $ k = −\dot{m}$ , then its speed is given by
+\begin{align*}
+v = \frac{k}{b}v_{ex}\left[1-\left(\frac{m}{m_0}\right)^{b/k}\right]
+\end{align*}
 \end{document}
 
 
