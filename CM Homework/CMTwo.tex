@@ -46,7 +46,7 @@ v_{term}&=\sqrt{\frac{mg}{c_2}}
 (b): Terminal velocity for an object subject to both drag forces is a bit more complicated.  The same holds true however, that terminal velocity occurs when the sum of the gravity force and drag forces equals 0:
 \begin{align*}
 0&=mg-c_1v-c_2v^2
-\end{align*}
+ qw\end{align*}
 Defining a few terms to make this cleaner:
 \begin{align*}
 k_1=\frac{c_1}{m},\ k_2=\frac{c_2}{m}\\
@@ -93,5 +93,41 @@ v_{term}&\approx\frac{-.13132}{.0044}=-29.8\frac{m}{s} (minus)\\
 The terminal velocity for the ball is approximately $29.9\frac{m}{s}$.
 \\ \\
 (c): For the ball, the terminal velocity is in the range of speeds dominated by the quadratic drag term.  If I had to choose one to keep, the quadratic drag would be more accurate, as the linear drag is negligible.
+
+\section*{Question 4}
+\begin{align*}
+\left|\frac{c_2v^2}{c_1v}\right|=\frac{0.22v\left|v\right|D^2}{(1.55\ast10^{-4})vD}=(1.4\ast10^3)\left|v\right|D
+\end{align*}
+Oil-Drop: $D= 10^{-4}cm = 10
+^{-6}m$, $m=10^{-12}g=10^{-15}kg$\\
+
+(a): Again assuming the quadratic term dominates when the ratio is 20 or higher.  Solving for v:
+\begin{align*}
+20=(1.4\ast10^3)\left|v\right|D\\
+\left|v\right|=\frac{20}{(1.4\ast10^3)D}\approx1.4*10^3\frac{m}{s}
+\end{align*}
+The Quadratic term dominates at velocities above $1.4*10^3\frac{m}{s}$.
+\\ \\
+I will assume the linear term dominates when the inverse ratio is 20 or higher:
+\begin{align*}
+\frac{1}{20}=(1.4*10^3)|v|D\\
+|v|=\frac{1}{20(1.4*10^3)D}\approx 3.6*10^{-4}\frac{m}{s}
+\end{align*}
+The linear term dominates at speeds below $3.6\frac{m}{s}$.
+\\ \\
+(b): The terminal speed occurs when the sum of the forces acting on the deop\
+ equals 0:
+\begin{align*}
+\sum F = 0 &= -mg -c_1v+c_2v^2\\
+v_{term}&=\frac{c_1\pm\sqrt{(c_1)^2+4mgc_2}}{2c_2}\\
+v_{term}&=\frac{1.55*10^{-4}*.1\pm\sqrt{(1.55*10^{-4}*10^{-6})^2+4*.2*9.8*.22*.1^2}}{2*.22*.1^2}\\
+v_{term}&=\frac{1.55*10^{-5}\pm\sqrt{2.4025*10^{-10}+.017248}}{.0044}\\
+v_{term}&\approx\frac{1.55*10^{-5}\pm\sqrt{.017248}}{.0044}\\
+v_{term}&\approx\frac{1.55*10^{-5}\pm.131332}{.0044}\\
+v_{term}&\approx\frac{.13135}{.0044}=29.9\frac{m}{s} (plus)\\
+v_{term}&\approx\frac{-.13132}{.0044}=-29.8\frac{m}{s} (minus)\\
+\end{align*}
+The terminal velocity for the ball is approximately $29.9\frac{m}{s}$.
+\\ \\
 
 \end{document}
