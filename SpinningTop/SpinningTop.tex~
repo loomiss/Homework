@@ -1,0 +1,21 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\pagestyle{fancy}
+\lhead{Samuel Loomis}
+\setlength{\headheight}{15pt}
+\chead{Precession and Nutation of a Spinning Top}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+
+\end{document}
+
+
