@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
 \pagestyle{fancy}
 \lhead{Samuel Loomis}
 \setlength{\headheight}{15pt}
@@ -38,17 +40,70 @@ I_{zx} & I_{zy} & I_{zz} \end{array} \right)
 The spining top has axial symetry along its core, (upright $z$-axis), this property makes the off diagonal components of the inertia tensor all equal to 0.
 The diagonals:
 \\
-For this example, the top will be portrayed as a uniform density cone.
+For this example, the top will be portrayed as a uniform density cone.\\
 \\
-The $I_{zz}$ product of inertia using cylindrical coordinates is:
+\begin{figure}[h!]
+\centering
+\includegraphics*[width=2in]{Taylor_Cone.png}
+\caption{Image of the cone shaped top for this example.  Image copied from Taylor, Classical Mechanics}
+\end{figure}
+\\
 \begin{align*}
 \varrho&=M/V=\frac{3M}{\pi R^2h}\\
 r&=\frac{Rz}{h}
 \end{align*}
+The $I_{zz}$ product of inertia using cylindrical coordinates is:
 \begin{align*}
 I_{zz}=\varrho\int_{V}dV\rho^2&=\varrho\int_0^hdz\int_0^{2\pi}d\phi\int_0^r\rho d\rho\rho^2\\
-&=
+&=\left.\varrho\int_0^hdz\int_0^{2\pi}d\phi\left(\frac{\rho^4}{4}\right)\right|_0^r\\
+&=\frac{\varrho}{4}\int_0^hdz\int_0^{2\pi}d\phi\left(\frac{Rz}{h}\right)^4\\
+&=\frac{\varrho\pi}{2}\int_0^hdz\frac{R^4z^4}{h^4}\\
+&=\frac{\varrho\pi}{2}\left.\frac{R^4z^5}{5h^4}\right|_0^h\\
+&=\frac{\varrho\pi R^4h}{10}\\
+I_{zz}&=\frac{3}{10}MR^2
 \end{align*}
+$I_{xx}$ and $I_{yy}$ are going to have the same value, as the top has rotaional symetry about the z-axis.  If the top is rotated 90 degrees around the z axis, the top looks identical to the origional configuration.
+\begin{align*}
+I_{xx}=I_{yy}=\int_VdV\varrho(y^2+z^2)&=\int_VdV\varrho y^2+\int_VdV\varrho z^2
+\end{align*}
+Rewriting the $I_{zz}$ integral in cartesian form gives:
+\begin{align*}
+I_{zz}=\varrho\int_VdV(x^2+y^2)
+\end{align*}
+The first term of $I_{xx}$ looks like the second term in $I_{zz}$ and both therms in $I_{zz}$ are equal due to symetry.  Thus:
+\begin{align*}
+I_{xx}&=\frac{I_{zz}}{2}+\int_VdV\varrho z^2
+\end{align*}
+Solving the second term:
+\begin{align*}
+\int_VdV\varrho z^2&=\varrho\int_0^hdz\int_0^{2\pi}d\phi\int_0^r\rho d\rho z^2\\
+&=\varrho\int_0^hdz\int_0^{2\pi}d\phi\left.\frac{\rho^2}{2}\right|_0^rz^2\\
+&=\frac{\varrho}{2}\int_0^hdz\int_0^{2\pi}d\phi\frac{R^2z^4}{h^2}\\
+&=\varrho\pi\int_0^hdz\frac{R^2z^4}{h^2}\\
+&=\frac{\varrho\pi}{5}R^2h^3\\
+&=\frac{3}{5}Mh^2\\
+I_{xx}=I_{yy}&=\frac{3}{20}M(R^2+4h^2)
+\end{align*}
+The inertia tensor for the cone is now:
+\begin{align*}
+\left( \begin{array}{ccc}
+\frac{3}{20}M(R^2+4h^2) & 0 & 0\\
+0 & \frac{3}{20}M(R^2+4h^2) & 0\\
+0 & 0 & \frac{3}{10}MR^2 \end{array} \right)
+\end{align*}
+The inertia tensor is diagonal meaning that the values shown are the principal moments and the axies $z$, $x$, and $y$ are the principle axies of the spinning top. This means that if the top is spinning about one of these axies, the angular momentum will point in the same direction as the angular velocity.  This will be used later in calculating how the top precesses around the vertical axis.\\
+\\
+The kinetic energy of the spinning top is:
+\begin{align*}
+T&=\frac{1}{2}\omega\cdot L\\
+&=\frac{1}{2}(\lambda_x \omega_x^2+\lambda_y\omega_y^2+\lambda_z\omega_z^2)
+\end{align*}
+
+The kinetic energy and angular momentum of a top spinning about it's axis of symetry, with no torque are:
+\begin{align*}
+T&=\frac{1}{2}\lambda_z\omega_z^2\\
+L&=\lambda_z\omega
+\end{align*} 
 \end{document}
 
 
