@@ -17,13 +17,10 @@
 \rfoot{}
 
 \begin{document}
-The precession and nutation of a spinning top is an analysis of a rotating rigid body system.
-
-
-\subsection*{Inertia Tensor}
-
-
-Products of Inertia:
+The precession and nutation of a spinning top is an analysis of a rotating rigid body system. Analyzing the top's axies, and finding the producs of inertia allows the equations of angular momentum and angular velocity to be found.  Using these values, the kinetic energy of the spinning top will be found, and ultimately used to find the lagrangian eqaution.  The lagrangian equation will then be used to find how each degree of freedom effects the final motion.  It turns out, that the $\phi$ and $\psi$ components of the spinning top system can be substituted for equations entirely dependent apon $\theta$.  This allows the total energy of the sytem to be analyzed and will give an idea about what values $\theta$ will ultimately be limited to, as well as how the top will precess depending on the angular momentums around the $z$-axis and the axis of symetry of the top.
+\\
+\\
+Starting with products of Inertia:
 \begin{align*}
 L_x=I_{xz}\omega&\ \ and\ \ L_y=I_{yz}\omega\\
 where:\ \ &I_{xz}=-\sum m_\alpha x_\alpha z_\alpha,\\
@@ -98,12 +95,109 @@ The kinetic energy of the spinning top is:
 T&=\frac{1}{2}\omega\cdot L\\
 &=\frac{1}{2}(\lambda_x \omega_x^2+\lambda_y\omega_y^2+\lambda_z\omega_z^2)
 \end{align*}
-
+\\
 The kinetic energy and angular momentum of a top spinning about it's axis of symetry, with no torque are:
 \begin{align*}
 T&=\frac{1}{2}\lambda_z\omega_z^2\\
-L&=\lambda_z\omega
+L&=\lambda_z\omega_z
+\end{align*}
+When the top is no longer vertical, and gravity comes into play, gravity will create a torque on the top.  The torque will be in a direction perpindicular to both the axis of symetry and the vertical axis.  Since torque is equal to the change in angular momentum, gravity acting on the top will cause a change in angular momentum.  At this point, I am going to follow Taylor's convention of setting the axies to 1, 2, 3, instead of x, y, z.  The change in angular momentum means that there is a change in angular velocity, and that the previously non existant x and y, 1 and 2 angular velocities are no longer zero.  If the torque is small, these angular velocities will be small as well.  The equation $L=\lambda_{3(z)}\omega=\lambda_3\omega e_3$ remains a decently accurate equation.  The axis of spin $e_3$ begins to precess while the spin velocity $\omega$ remains constant.  The torque causes a slow precession:
+\begin{align*}
+\dot L&=\Gamma\\
+\lambda_3\omega\dot e_3&=R\times Mg\\
+\dot e_3&=\frac{MgR}{\lambda_3\omega}\hat z\times e_3=\Omega \times e_3
+\end{align*}
+$\dot e$ is the change in direction of $e_3$ and $\Omega$ is the angular velocity around $\hat z$ and is equal to $\frac{MgR}{\lambda_3\omega}\hat z$.
+
+This shows that under a weak torque, and constant angle $\theta$, the spinning top will slowly turn.
+
+According to Taylor, there is a free precession in the absence of torque.  Using Euler's equations:
+\begin{align*}
+\lambda_1\dot\omega_1-(\lambda_2-\lambda_3)\omega_2\omega_3=\Gamma_1\\
+\lambda_2\dot\omega_2-(\lambda_3-\lambda_1)\omega_3\omega_1=\Gamma_2\\
+\lambda_3\dot\omega_3-(\lambda_1-\lambda_2)\omega_1\omega_2=\Gamma_3
+\end{align*}
+In the absence of torque:
+\begin{align*}
+\lambda_1\dot\omega_1=(\lambda_2-\lambda_3)\omega_2\omega_3\\
+\lambda_2\dot\omega_2=(\lambda_3-\lambda_1)\omega_3\omega_1\\
+\lambda_3\dot\omega_3=(\lambda_1-\lambda_2)\omega_1\omega_2
+\end{align*}
+For the spinning top in question, the products of inertia $\lambda_1=\lambda_2$ and thus $\dot\omega_3=0$ and $\omega_3$ is constant.  This allows the remaining two equations to be rewritten:
+\begin{align*}
+\dot\omega_1=\frac{(\lambda_1-\lambda_3)\omega_3}{\lambda_1}\omega_2&=\Omega_b\omega_2\\
+\dot\omega_2=-\frac{(\lambda_1-\lambda_3)\omega_3}{\lambda_1}\omega_1&=-\Omega_b\omega_1\\
+\frac{(\lambda_1-\lambda_3)\omega_3}{\lambda_1}&=\Omega_b
+\end{align*}
+These are solvable by introducing $\eta=\omega_1+i\omega_2$, which then combines $\dot\omega_1$ and $\dot\omega_2$ into a single equation:
+\begin{align*}
+\dot\eta&=-i\Omega_b\eta\\
+\eta&=\eta_0e^{-i\Omega_bt}
+\end{align*}
+Taking the real and imaginary parts of $\eta$ gives:
+\begin{align*}
+\omega=(\omega_0\ cos\ \Omega_bt,\ -\omega_0\ sin\ \Omega_bt,\ \omega_3)
+\end{align*}
+The angular momentum is then:
+\begin{align*}
+L=(\lambda_1\omega_0\ cos\ \Omega_bt,\ -\lambda_2\omega_0\ sin\ \Omega_bt,\ \lambda_3\omega_3)
+\end{align*}
+And the kinetic energy is:
+\begin{align*}
+T=\frac{1}{2}\lambda_1(\dot\phi^2sin^2\ \theta+\dot\theta^2)+\frac{1}{2}\lambda_3(\dot\psi+\dot\phi\ cos\ \theta)^2
+\end{align*}
+Using the kinetic energy, the lagrangian for the spinning top can be calculated and used to find the equation of motion.  The lagrangian is:
+\begin{align*}
+\mathcal{L}=\frac{1}{2}\lambda_1(\dot\phi^2sin^2\ \theta+\dot\theta^2)+\frac{1}{2}\lambda_3(\dot\psi+\dot\phi\ cos\ \theta)^2-MgR\ cos\ \theta
+\end{align*}
+The $\theta$ portion of the lagrange equation is:
+\begin{align*}
+\lambda_1\ddot\theta=\lambda_1\dot\phi^2sin\ \theta\ cos\ \theta-\lambda_3(\dot\psi +\dot\phi\ cos\ \theta)\dot\phi\ sin\ \theta+MgR\ sin\ \theta
+\end{align*}
+The lagrangian is not based on $\phi$ or $\psi$ and so their equations are a bit simpler:
+\begin{align*}
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial \dot\phi}&=0\\
+p_\phi=\frac{\partial\mathcal{L}}{\partial \dot\phi}&=\lambda_1\dot\phi\ sin^2\theta+\lambda_3(\dot\psi+\dot\phi\ cost\ \theta)cos\ \theta=constant
+\end{align*}
+According to Taylor, this value is equal to the $z$-axis angular momentum, and is conserved.
+\begin{align*}
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial \dot\psi}&=0\\
+p_\psi=\frac{\partial\mathcal{L}}{\partial \dot\psi}&=\lambda_3(\dot\psi+\dot\phi\ cos\ \theta)=constant
+\end{align*}
+This value is equal to the angular momentum along the top's axis of symetry and thus tells us that the angular momentum $L_3$ is conserved and consequently the angular  velocity $\omega_3$ is constant.
+\\
+\\
+Going back to $L_z$, this value can be solved for $\dot\phi$:
+\begin{align*}
+L_z&=\lambda_1\dot\phi\ sin^2\ \theta+\lambda_3(\dot\psi+\dot\phi\ cos\ \theta)cos\ \theta\\
+&=\lambda_1\dot\phi\ sin^2\ \theta+L_3cos\ \theta\\
+\dot\phi&=\frac{L_z-L_3cos\ \theta}{\lambda_1sin^2\ \theta}
+\end{align*}
+Analyzing the $\dot\phi$ equation shows that if $\theta$ remains constant, then $\dot\phi$ also remains constant.  Taylor sets this value to $\Omega$.  Similarly looking at $L_3$:
+\begin{align*}
+L_3&=\lambda_3(\dot\psi+\dot\phi\ cos\ \theta)
+\end{align*}
+If both $\theta$ and $\dot\phi$ are constant, then $\dot\psi$ must also be constant.  Now given a constant $\theta$, the theta portion of the lagrangian can be rewritten to solve for the constant precession $\Omega$.  If $\theta$ is constant $\ddot\theta=0$.  Rewriting the $\theta$ equation with a few substitutions and dropping out the sines:
+\begin{align*}
+\lambda_1\Omega^2\ cos\ \theta-\lambda_3\omega_3\Omega+MgR=0
+\end{align*}
+Solving for $\Omega$ is simply a quadratic equation and Taylor shows approximate values for $\Omega$:
+\begin{align*}
+\Omega&\approx\frac{MgR}{\lambda_3\omega_3}\\
+&\approx\frac{\lambda_3\omega_3}{\lambda_1cos\ \theta}
+\end{align*}
+The first term above was calculated and predicted earlier, and the second term, according to Taylor is equal to the value for the spacial rotation foune in the free precession calculations.\\
+\\
+The nutation of the top can be analyzed using the total energy of the spinning top.  Using $p_\phi=L_z$ and $p_\psi=L_3$:
+\begin{align*}
+E&=T+U\\
+&=\frac{1}{2}\lambda_1\dot\theta^2+\left(\frac{(L_z-L_3cos\ cos\ \theta)^2}{2\lambda_1sin^2\ \theta}+\frac{L_3^2}{2\lambda_3}+MgRcos\ \theta\right)
+\end{align*}
+The portion in parenthesis above acts as an effective potential and the only dependency on the entire energy equation is $\theta$.  As $\theta$ ranges from $0$ to $\pi$, the $sin^2\ \theta$ term blows up as it approaches either value.  Plotting the effective potential versus $\theta$ will show maximum and minimum values for $\theta$ at any given energy level. The path the axis of symetry maps out in its precession and nutation depends on the $\dot\phi$ equation:
+\begin{align*}
+\dot\phi&=\frac{L_z-L_3cos\ \theta}{\lambda_1sin^2\ \theta}
 \end{align*} 
+Values where the angular momentum around the $z$-axis is larger than the maximum value of the angular momentum around the axis of symetry means the $\dot\phi$ value will never become 0 or less, and thus the top will continue to precess in one direction, with the top nutating between the max and min values of $\theta$.  If the $L_3$ value is higher than $L_z$, the precession will not be in one constant direction, and the top will appear to precess and nutate in circular patterns, mapping out loops, and yet still be nodding between the min and max $\theta$ values.
 \end{document}
 
 
