@@ -11,23 +11,109 @@
 
 \lhead{Samuel Loomis}
 \setlength{\headheight}{15pt}
-\chead{Quantum Mechanichs HW 1.1}
+\chead{Quantum Mechanichs HW 1}
 \rhead{\thepage\ of \pageref{LastPage}}
 \lfoot{}
-\cfoot{Due: 1/8/2014}
+\cfoot{Due: 1/14/2015}
 \rfoot{}
 
 \begin{document}
-\section*{Q.1}
-I personally agree with the guidlines about academic honesty.  I find that even working with others, I need to crawl through the homework on my own to be able to grasp what I need to know, and be able to apply it later in my physics life.  If a solution to the homework is used, the knowledge just doesn't sink in as well. 
-\\ \\
-Wave and probability traces:\\
-\begin{figure}[h]
-\centering
-\includegraphics[width=5in]{Ground_Wave.png}
-\includegraphics[width=5in]{Ground_Probability.png}
-\includegraphics[width=5in]{20_Wave.png}
-\includegraphics[width=5in]{20_Probability.png}
-\end{figure}
-I have read through all the side bar links and understand them.
+\section*{Q.2: McIntyre 2.17}
+A spin-1 particle is in the state
+\begin{align*}
+\left|\Psi\right>\dot =\frac{1}{\sqrt{30}}\begin{pmatrix}
+1\\
+2\\
+5i
+\end{pmatrix}
+\end{align*}\\
+$a)$ What are the possible results of a measurement of the spin component $S_z$, and with what probabilities would they occur?  Calculate the expectation value of the spin component $S_z$.\\
+$b)$ Calculate the expectation value of the spin component $S_x$. \textit{Suggestion:} Use matrix mechanics to caluate the expectation value.\\
+\\
+The state of the system is:
+\begin{align*}
+\left|\Psi\right>=\frac{1}{\sqrt{30}}(1\left|1\right>+2\left|0\right>+5i\left|-1\right>)
+\end{align*}
+The possible measurements of $S_z$ for the spin-1 system are $\hbar$, $0\hbar$, $-\hbar$, for $\left|1\right>$, $\left|0\right>$, $\left|-1\right>$ respectively.\\ \\
+The probablity of measuring $\hbar$ is:
+\begin{align*}
+\mathcal{P}_1&=\left|\left<1\right.\left|\Psi\right>\right|^2\\
+&=\left|\left<1\right|\left[\frac{1}{\sqrt{30}}\left|1\right>+\frac{2}{\sqrt{3  0}}\left|0\right>+\frac{5i}{\sqrt{30}}\left|-1\right>\right]\right|^2\\
+&=\left|\frac{1}{\sqrt{30}}\left<1\right.\left|1\right>+\frac{2}{\sqrt{30}}\left<1\right.\left|0\right>+\frac{5i}{\sqrt{30}}\left<1\right.\left|-1\right>\right|^2\\
+  &=\left|\frac{1}{\sqrt{30}}\right|^2=\frac{1}{30}
+\end{align*}
+The probability of measuring $0\hbar$ is:
+\begin{align*}
+\mathcal{P}_0&=\left|\left<0\right.\left|\Psi\right>\right|^2\\
+&=\left|\left<0\right|\left[\frac{1}{\sqrt{30}}\left|1\right>+\frac{2}{\sqrt{3  0}}\left|0\right>+\frac{5i}{\sqrt{30}}\left|-1\right>\right]\right|^2\\
+&=\left|\frac{2}{\sqrt{30}}\right|^2=\frac{4}{30}
+\end{align*}
+The probablility of measuring $-\hbar$ is:
+\begin{align*}
+\mathcal{P}_{-1}&=\left|\left<-1\right.\left|\Psi\right>\right|^2\\
+&=\left|\left<-1\right|\left[\frac{1}{\sqrt{30}}\left|1\right>+\frac{2}{\sqrt{3  0}}\left|0\right>+\frac{5i}{\sqrt{30}}\left|-1\right>\right]\right|^2\\
+&=\left|\frac{5i}{\sqrt{30}}\right|^2=\frac{25}{30}
+\end{align*}
+The expectation value of $S_z$ is:
+\begin{align*}
+\left<S_z\right>&=\left<\Psi\right.\left|S_z\right|\left.\Psi\right>\\
+&=\hbar(\mathcal{P}_1)+0\hbar(\mathcal{P}_0)-\hbar(\mathcal{P}_{-1})\\
+&=\frac{\hbar}{30}-\frac{25\hbar}{30}=-\frac{24}{30}\hbar=-\frac{4}{5}\hbar
+\end{align*}
+
+The expectation value of the spin component $S_x$ will be found using the suggested method of matricies.  The matrix representation of the $S_x$ operator is:
+\begin{align*}
+S_x&=\frac{\hbar}{\sqrt{2}}\begin{pmatrix}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{pmatrix}
+\end{align*}
+And the expectation value os $S_x$ is:
+\begin{align*}
+\left<S_x\right>&=\left<\Psi\right|S_x\left|\Psi\right>\\
+&=\frac{1}{\sqrt{30}}\begin{pmatrix}
+1 & 2 & -5i
+\end{pmatrix}\frac{\hbar}{\sqrt{2}}\begin{pmatrix}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{pmatrix}\frac{1}{\sqrt{30}}\begin{pmatrix}
+1\\
+2\\
+5i
+\end{pmatrix}\\
+&=\frac{\sqrt{2}}{60}\hbar\begin{pmatrix}
+1 & 2 & -5i
+\end{pmatrix}\begin{pmatrix}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{pmatrix}\begin{pmatrix}
+1\\
+2\\
+5i
+\end{pmatrix}\\
+&=\frac{\sqrt{2}}{60}\hbar\begin{pmatrix}
+2 & 1-5i & 2
+\end{pmatrix}\begin{pmatrix}
+1\\
+2\\
+5i
+\end{pmatrix}\\
+&=\frac{\sqrt{2}}{60}\hbar(2+(2-10i)+10i)\\
+\left<S_x\right>&=\frac{\sqrt{2}}{15}\hbar
+\end{align*}
+\pagebreak
+\section*{Q.3 McIntyre 5.11}
+A particle is in the ground state of an infinite square well. The potential wall at $x=L$ suddenly moves to $x=3L$ such that the well is now three times its original size. Find the porbabilities that the particle is measured to have the ground state energy or the first excited state energy of the new well.\\
+\\
+Initially, the particle is in the ground state of the initial configuration and its energy eigenstate wave function is:
+\begin{align*}
+\left|\Psi\right>&=\sqrt{\frac{2}{L}}sin\frac{\pi x}{L}
+\end{align*}
+After the boundary shift, the new allowable states are:
+\begin{align*}
+\left|\phi_n\right>&=\sqrt{\frac{2}{3L}}sin\frac{n\pi x}{3L}
+\end{align*}
 \end{document}
